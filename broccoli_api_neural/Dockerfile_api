@@ -1,0 +1,12 @@
+FROM broccoli_downloads
+
+WORKDIR /app
+COPY ./ /app/broccoli_api_neural
+
+ENV PYTHONPATH "${PYTHONPATH}:/app"
+
+CMD /bin/bash -c 'source activate api_neural;\
+python /app/broccoli_api_neural/api_neural.py'
+
+# port for communicating with our app
+EXPOSE 5000

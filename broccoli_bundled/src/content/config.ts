@@ -1,0 +1,1 @@
+export var min_token_exposure = 1000 // [ms] minimum onscreen time for a token to before we consider it "seen"

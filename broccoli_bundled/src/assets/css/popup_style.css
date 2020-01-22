@@ -1,0 +1,178 @@
+/* Space out content a bit */
+body {
+    font-family: 'EB Garamond', serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fdf6e3;
+    width:250px;
+  }
+  
+  h1 {
+    font-family: 'Vibur', cursive;
+  }
+  
+  h2 {
+    font-style: bold;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  
+  .image {
+    -webkit-animation:spin 100s linear infinite;
+    -moz-animation:spin 100s linear infinite;
+    animation:spin 100s linear infinite;
+  }
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  
+  .face:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  mark {
+    background-color: rgba(0, 190, 0, 0);
+    color: rgba(0, 190, 0, 0.8);
+    font-style:bold;
+  }
+  /* Everything but the jumbotron gets side spacing for mobile first views */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Custom page header */
+  .header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  /* Make the masthead heading the same height as the navigation */
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+  }
+  
+  /* Custom page footer */
+  .footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  /* Customize container */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 730px;
+    }
+  }
+  .container-narrow > hr {
+    margin: 30px 0;
+  }
+  
+  /* Main marketing message and sign up button */
+  .jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: rgba(255, 233, 173, .5);
+  }
+  .jumbotron .btn {
+    padding: 10px 24px;
+    font-size: 21px;
+  }
+  
+  /* Supporting marketing content */
+  .marketing {
+    margin: 40px 0;
+  }
+  .marketing p + h4 {
+    margin-top: 28px;
+  }
+  
+  /* Responsive: Portrait tablets and up */
+  @media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+      margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+      border-bottom: 0;
+    }
+  }
+  
+  [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  [type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 4em;
+    padding-top: .25em;
+    cursor: pointer;
+  }
+  
+  [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before, [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    height: 1.5em;
+    transition: all .5s ease;
+  }
+  
+  [type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+    left: 0;
+    top: 0;
+    width: 3em;
+    border: 2px solid #dddddd;
+    background: #dddddd;
+    border-radius: 1.1em;
+    z-index: -1;
+  }
+  
+  [type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+    left: .15em;
+    top: .125em;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 1.5em;
+  }
+  
+  [type="checkbox"]:checked + label:after { left: 1.65em; }
+  
+  [type="checkbox"]:checked + label:before {
+    background-color: #72da67;
+    border-color: #72da67;
+  }

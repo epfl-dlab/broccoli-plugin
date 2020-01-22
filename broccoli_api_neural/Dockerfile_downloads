@@ -1,0 +1,10 @@
+FROM broccoli_deps
+
+RUN /bin/bash -c 'echo $(which python);\
+source activate api_neural;\
+python -c "import nltk; nltk.download(\"wordnet\"); nltk.download(\"words\")";\
+python -m spacy download en;\
+python -c "from fastai import untar_data, URLs; model_path = untar_data(URLs.WT103, data=False)"'
+
+# port for communicating with out app
+EXPOSE 5000

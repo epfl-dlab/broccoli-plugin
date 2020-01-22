@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body style="min-width: 400px">
+
+  <script src="index.ts"></script>
+
+
+  <div class="container">
+    <p>
+      <span class="badge badge-secondary">Language Settings</span>
+    </p>
+
+    <div class="input-group mb-3" style="width: 100%;">
+      <div class="input-group-prepend" style="width: 50%;">
+        <span class="input-group-text" style="width: 100%;">Target Language:</span>
+      </div>
+      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdown_languages"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 50%;">
+        ...
+      </button>
+      <div id="menu" class="dropdown-menu" aria-labelledby="dropdown_languages">
+        <form class="px-4 py-2">
+          <input type="search" class="form-control" id="searchLanguages" placeholder="Enter your desired language here"
+            autofocus="autofocus">
+        </form>
+        <div id="menuItems"></div>
+        <div id="empty" class="dropdown-header">No language found</div>
+      </div>
+    </div>
+
+
+    <form style="width: 100%; margin-bottom: 10px;">
+      <div class="form-row align-top">
+        <div class="col-10">
+          <label for="formControlRange">Min distance between Broccoli words:</label>
+          <input id='minDistSlider' type="range" class="form-control-range" id="formControlRange" min="10" max="100"
+            value="20" step="5">
+        </div>
+        <div class="col-2 my-auto">
+          <span id='sliderValue' class="badge badge-pill badge-secondary my-auto">100</span>
+        </div>
+      </div>
+    </form>
+
+    <div class="input-group mb-3" style="width: 100%;">
+      <div class="input-group-prepend" style="width: 80%;">
+        <span class="input-group-text" style="width: 100%;">Filter Stopwords:</span>
+      </div>
+      <div class="input-group-text">
+        <input id="stopwordfilter-checkbox" type="checkbox" aria-label="Checkbox for following text input">
+      </div>
+    </div>
+
+    <!--
+    <div class="input-group mb-3" style="width: 100%;">
+      <div class="input-group-prepend" style="width: 80%;">
+        <span class="input-group-text" style="width: 100%;">Filter short words:</span>
+      </div>
+      <div class="input-group-text">
+        <input id="shortwordfilter-checkbox" type="checkbox" aria-label="Checkbox for following text input">
+      </div>
+    </div>
+-->
+    <hr>
+
+    <p>
+      <span class="badge badge-secondary">UI Settings</span>
+    </p>
+
+    <div class="input-group mb-3" style="width: 100%;">
+      <div class="input-group-prepend" style="width: 80%;">
+        <span class="input-group-text" style="width: 100%;">Show Riddle in Popup:</span>
+      </div>
+      <div class="input-group-text">
+        <input id="riddle-checkbox" type="checkbox" aria-label="Checkbox for following text input">
+      </div>
+    </div>
+
+    <div class="input-group mb-3" style="width: 100%;">
+      <div class="input-group-prepend" style="width: 80%;">
+        <span class="input-group-text" style="width: 100%;">Broccoli Active:</span>
+      </div>
+      <div class="input-group-text">
+        <input id="active-checkbox" type="checkbox" aria-label="Checkbox for following text input">
+      </div>
+    </div>
+
+    <hr>
+
+    <button style="margin-bottom: 10px" id="save-button" class="btn btn-info">Save</button>
+  </div>
+</body>
+
+</html>

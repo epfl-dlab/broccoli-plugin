@@ -1,0 +1,62 @@
+{
+  "manifest_version": 2,
+  "name": "Broccoli Vocabulary Trainer",
+  "version": "0.0.1",
+  "description": "bundled version",
+  "author": "",
+  "background": {
+    "scripts": [
+      "./assets/webextension-polyfill/dist/browser-polyfill.min.js",
+      "./background.ts"
+    ]
+  },
+  "options_ui": {
+    "page": "options_ui/index.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com  https://127.0.0.1:8000/; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.wikipedia.org/*"
+      ],
+      "js": [
+        "./content/fontawesome_fix.ts",
+        "./assets/js/fontawesome.all.js",
+        "./assets/webextension-polyfill/dist/browser-polyfill.min.js",
+        "./content.ts"
+      ],
+      "css": [
+        "./assets/css/colors.css",
+        "./assets/bootstrap/dist/css/bootstrap.min.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "content/html_templates/mark.html",
+    "content/html_templates/riddle_content.html",
+    "content/html_templates/riddle_title.html",
+    "content/html_templates/result_content.html",
+    "content/html_templates/result_title.html",
+    "content/html_templates/review_content.html",
+    "content/html_templates/review_title.html",
+    "popup/html_templates/firebase_ui_container.html"
+  ],
+  "icons": {
+    "16": "./assets/imgs/broccoli16.png",
+    "48": "./assets/imgs/broccoli48.png",
+    "128": "./assets/imgs/broccoli128.png"
+  },
+  "browser_action": {
+    "default_popup": "./popup/index.html",
+    "default_icon": {
+      "16": "./assets/imgs/broccoli16.png",
+      "48": "./assets/imgs/broccoli48.png",
+      "128": "./assets/imgs/broccoli128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "<all_urls>"
+  ]
+}
