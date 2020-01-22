@@ -61,24 +61,6 @@ async function process() {
     // use python backend to get target tokens, this is done in an async way
     let promise = internal_api.getTargetTokens(innerText, innerHTML)
       .then((payload) => {
-
-        // mock response from server
-        // TODO: remove this
-        /*payload = {
-          target_token_infos: [{
-            target_token: "dog",
-            token: "dog",
-            translation: "Hund",
-            synonyms: ["dog", "canine"],
-            proba: 0.9,
-            prediction_id: 1,
-            text: "a dog is there. he is big.",
-            sentence: "a dog is there.",
-            tokens: ["a", "dog", "is", "there", "."],
-            token_index: 0
-          }],
-          new_text: "a <mark id=\"mark_0\"></mark> is there. he is big"
-        }*/
         paragraph.innerHTML = payload["new_text"]
 
         // look for token marks and fill in proper html

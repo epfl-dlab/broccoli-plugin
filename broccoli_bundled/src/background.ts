@@ -13,8 +13,6 @@ import * as external_api from "./background/external_api"
 
 import {config} from './config'
 
-// TODO: import just the parts we need
-// this constantly complains that we're importing everything into a release build
 import firebase from "firebase"
 import { networkInterfaces } from "os";
 
@@ -179,10 +177,6 @@ function setupMessageRouting() {
 
                             // add the time and add to the database
                             // we don't wait for the acknowledgement here
-                            // in terms of architecture it would be nice to only give stored tokens to the contentscript
-                            // but the code is already nested horribly deep
-                            // TODO: look at ways to flatten this nesting and route only stored tokens to the contentscript
-                            // since we are now working on giving each token a unique id in the website, we can probably do this
                             targetToken.time = firebase.database.ServerValue.TIMESTAMP
                             targetToken.paragraph_key = snapshot.key
                             database.ref("users/" + user.uid + "/targetTokens").push(targetToken)

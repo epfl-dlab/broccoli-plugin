@@ -63,8 +63,6 @@ def translate_tokens(target_token_infos, TARGET_LANGUAGE):
         translated_phrase, from_words = sentence_translation
         target_token = target_token_info["token"]
 
-        # TODO: for long words, the last letter can be cut off in the alignmnent
-        # TODO: provide single sentences, for long sentences, tokens can appear more than once
         translation = None
         if from_words and target_token in from_words:
             translation = from_words[target_token][0]

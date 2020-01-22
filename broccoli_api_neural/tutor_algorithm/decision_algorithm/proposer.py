@@ -17,7 +17,6 @@ class Proposer:
     This is meant to emphasize that we are using the lemmatized versions of each word.
     'state' and 'states' should correspond to the same entry in our vocabulary.
 
-    TODO: this hides grammatical complexity.
     """
 
     def __init__(self, memory_model: StatefulMemory, max_num_lm_scores=10, track_only_selection=True,
