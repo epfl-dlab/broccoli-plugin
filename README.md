@@ -1,3 +1,13 @@
+# Broccoli
+
+This repository contains the source code for our Broccoli prototype.
+Since the installation is complex (it requires you to set up API keys for the Azure Translation API and Firebase),
+we are providing a demo video here:
+![Broccoli Demo](demo.gif)
+
+a high-res version can be found on YouTube:
+https://www.youtube.com/watch?v=wg-5UqRaoNs&feature=youtu.be
+ 
 # Installation guide
 The following guide has been tested with Ubuntu 19.10
 
@@ -67,8 +77,9 @@ parcel build src/manifest.json
 
 ```
 ## install and run the plugin the plugin in Firefox or Chrome
-ToDo: embed video
-
+The plugin can now be installed in Firefox and Chrome (or any other browser that supports the WebExtension standard).
+Since the plugin is not signed, it requires you to enable 'developer mode' in Chrome.
+In Firefox, you can install the plugin by selecting to 'debug plugins' and then to install a temporary plugin.
 
 ## user Docker to start backend
 once you've logged in, you'll be asked to connect to the backend.
