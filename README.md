@@ -7,6 +7,12 @@ we are providing a demo video here:
 
 a high-res version can be found on YouTube:
 https://www.youtube.com/watch?v=wg-5UqRaoNs&feature=youtu.be
+
+# Code
+This code is intended as a reference implementation and platform for further research.
+As such we have included functionality that we consider useful but that has not been evaluated as a part of the current Broccoli publication.
+For example, the plugin has an options menu where it is possible to enable additional user interactions. Instead of revealing the translation after an annotation is clicked, the prototype can also show a free-form text input where the user has to guess the translation. This is a template for setting up more complex user interactions that might improve word retention.
+However, the current conception of Broccoli builds on passive, zero-effort learning. 
  
 # Installation guide
 The following guide has been tested with Ubuntu 19.10
